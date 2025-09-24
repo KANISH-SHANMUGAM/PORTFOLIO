@@ -113,7 +113,7 @@ const Contact = () => {
     { name: 'GitHub', icon: '🐙', url: FRONTEND_CONFIG.SOCIAL_LINKS.GITHUB },
     { name: 'LinkedIn', icon: '💼', url: FRONTEND_CONFIG.SOCIAL_LINKS.LINKEDIN },
     { name: 'Medium', icon: '📝', url: FRONTEND_CONFIG.SOCIAL_LINKS.MEDIUM },
-    { name: 'Portfolio', icon: '🌐', url: FRONTEND_CONFIG.SOCIAL_LINKS.PORTFOLIO }
+    // { name: 'Portfolio', icon: '🌐', url: FRONTEND_CONFIG.SOCIAL_LINKS.PORTFOLIO }
   ];
 
   return (

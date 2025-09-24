@@ -12,15 +12,15 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-main">
-            <div className="footer-brand">
-              {/* <h3 className="gradient-text">Portfolio</h3> */}
-              <blockquote className="footer-quote">
-                "The best way to predict the future is to create it."
-                <cite>— Peter Drucker</cite>
-              </blockquote>
-            </div>
+          {/* Quote at the top */}
+          <div className="footer-quote-section">
+            <blockquote className="footer-quote">
+              "The best way to predict the future is to create it." — Peter Drucker
+            </blockquote>
+          </div>
 
+          {/* Links and other content at the bottom */}
+          <div className="footer-main">
             <div className="footer-links">
               <div className="footer-section">
                 <h4>Quick Links</h4>
@@ -56,21 +56,21 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </div>
 
-          <div className="footer-bottom">
-            <div className="footer-copyright">
-              <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
-            </div>
-            
-            <div className="footer-actions">
-              <button 
-                className="back-to-top"
-                onClick={scrollToTop}
-                title="Back to top"
-              >
-                <span>↑</span>
-              </button>
+            <div className="footer-bottom">
+              <div className="footer-copyright">
+                <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
+              </div>
+              
+              <div className="footer-actions">
+                <button 
+                  className="back-to-top"
+                  onClick={scrollToTop}
+                  title="Back to top"
+                >
+                  <span>↑</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -38,8 +38,8 @@
 }
 
 .shape-2 {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   top: 60%;
   right: -5%;
   animation-delay: 2s;
@@ -126,8 +126,8 @@
 
 .image-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .profile-image {
@@ -143,6 +143,23 @@
   position: relative;
   z-index: 2;
   animation: pulse 2s infinite;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6366f1;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
 }
 
 .floating-elements {
@@ -161,20 +178,20 @@
 }
 
 .floating-icon:nth-child(1) {
-  top: 20%;
+  top: -15%;
   left: 10%;
   animation-delay: 0s;
 }
 
 .floating-icon:nth-child(2) {
   top: 70%;
-  right: 10%;
+  right: -7%;
   animation-delay: 1s;
 }
 
 .floating-icon:nth-child(3) {
   top: 50%;
-  left: -10%;
+  left: -14%;
   animation-delay: 2s;
 }
 
@@ -233,9 +250,15 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 60px;
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+  
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
     text-align: center;
   }
   
@@ -253,30 +276,147 @@
   
   .hero-description {
     font-size: 1rem;
+    margin-bottom: 30px;
   }
   
   .hero-buttons {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
   }
   
   .image-container {
     width: 250px;
     height: 250px;
   }
+  
+  .profile-photo {
+    border-width: 3px;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+  }
+  
+  /* Optimize background shapes for mobile */
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    left: -15%;
+  }
+  
+  .shape-2 {
+    width: 250px;
+    height: 250px;
+    top: 70%;
+    right: -10%;
+  }
+  
+  .shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    right: 10%;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  
+  .hero-content {
+    gap: 25px;
+  }
+  
   .hero-title {
     font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    margin-bottom: 15px;
+  }
+  
+  .hero-description {
+    margin-bottom: 25px;
   }
   
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
   
   .btn {
     width: 200px;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profile-photo {
+    border-width: 2px;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.2);
+  }
+  
+  .floating-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 25px;
+  }
+  
+  .hero-content {
+    gap: 20px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .profile-photo {
+    border-width: 2px;
+  }
+  
+  .floating-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Further optimize shapes for very small screens */
+  .shape-1 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .shape-2 {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .shape-3 {
+    width: 80px;
+    height: 80px;
   }
 }

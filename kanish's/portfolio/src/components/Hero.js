@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
+import profileImage from '../assests/kanish.png';
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -73,19 +74,11 @@ const Hero = () => {
           <div className="hero-image">
             <div className="image-container">
               <div className="profile-image">
-                <div className="image-placeholder">
-                  <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="100" r="80" fill="url(#gradient)" />
-                    <circle cx="100" cy="80" r="25" fill="white" />
-                    <path d="M60 140 Q100 120 140 140" stroke="white" strokeWidth="8" fill="none" strokeLinecap="round" />
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#6366f1" />
-                        <stop offset="100%" stopColor="#8b5cf6" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
+                <img 
+                  src={profileImage} 
+                  alt="Kanish S" 
+                  className="profile-photo"
+                />
                 <div className="floating-elements">
                   <div className="floating-icon">⚡</div>
                   <div className="floating-icon">🚀</div>
